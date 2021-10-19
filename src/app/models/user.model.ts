@@ -1,4 +1,4 @@
-export interface TrimmedUser {
+export interface User {
     gender: string
     name: string
     email: string

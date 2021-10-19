@@ -14,6 +14,6 @@ export class AppComponent {
     constructor() {
         const number$: Observable<number> = of(1, 2, 3)
         const string$: Observable<string> = from(['a', 'b', 'c'])
-    //   const fork$: Observable<unknown> = forkJoin;
+    //   const fork$: Observable<unknown> = forkJoin
     }
 }
