@@ -10,6 +10,8 @@ import { UserApiResult, UserData } from '../models/user-api-result.model'
 })
 export class UserApiService {
 
+    private static nextUserId: number = 0
+
     /**
      * Constructs the Users Service
      * @param httpClient
@@ -43,8 +45,8 @@ export class UserApiService {
             name: `${userData.name.title} ${userData.name.first} ${userData.name.last}`,
             email: userData.email,
             dob: new Date(userData.dob.date),
-            id: userData.id.value,
-            picture: userData.picture.large,
+            id: UserApiService.nextUserId++,
+            image: userData.picture.large,
         } as User
     }
 }

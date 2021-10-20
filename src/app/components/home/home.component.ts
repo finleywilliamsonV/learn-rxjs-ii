@@ -1,15 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core'
+import { mergeMap } from 'rxjs/operators'
+import { User } from '../../models/user.model'
+import { UserApiService } from '../../services/user-api.service'
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+    selector: 'app-home',
+    templateUrl: './home.component.html',
+    styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+    users!: User[]
 
-  ngOnInit(): void {
-  }
+    constructor(private userApiService: UserApiService) {
+        mergeMap()
+    }
+
+    ngOnInit(): void {
+    }
 
 }
